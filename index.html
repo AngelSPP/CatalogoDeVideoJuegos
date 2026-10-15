@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> JelasGame | Catálogo de videojuegos</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header class="encabezado">
+        <h1>🎮 JelasGames</h1>
+        <p>Descubre tu próximo videojuego favorito</p>
+    </header>
+
+    <main class="contenedor">
+        
+<section class="controles">
+    <input
+        type="text"
+        id="buscador"
+        placeholder="Buscar videojuegos..."
+        aria-label="Buscar videojuegos"
+    >
+
+    <select id="filtro-genero" aria-label="Filtrar por género">
+        <option value="todos">Todos los géneros</option>
+        <option value="Acción">Acción</option>
+        <option value="Aventura">Aventura</option>
+        <option value="RPG">RPG</option>
+        <option value="Terror">Terror</option>
+    </select>
+
+    <select id="orden-puntuacion" aria-label="Ordenar por puntuación">
+        <option value="ninguno">Orden original</option>
+        <option value="mayor">Mayor puntuación</option>
+        <option value="menor">Menor puntuación</option>
+    </select>
+
+    <button id="boton-favoritos" type="button" aria-pressed="false">
+        ❤️ Ver favoritos
+    </button>
+</section>
+
+
+            <select id="filtro-genero" aria-label="Filtrar por género">
+                <option value="todos">Todos los géneros</option>
+                <option value="Acción">Acción</option>
+                <option value="Aventura">Aventura</option>
+                <option value="RPG">RPG</option>
+                <option value="Terror">Terror</option>
+            </select>
+        </section>
+
+        <h2>Catálogo de juegos</h2>
+
+        <section id="catalogo" class="catalogo"></section>
+
+        <p id="mensaje-vacio" hidden>
+            No se encontraron videojuegos.
+        </p>
+    </main>
+
+<dialog id="ventana-detalles">
+    <button id="cerrar-detalles" class="cerrar" type="button"
+        aria-label="Cerrar ventana">✕</button>
+
+    <img id="detalle-imagen" src="" alt="">
+
+    <div class="contenido-detalles">
+        <h2 id="detalle-nombre"></h2>
+        <p id="detalle-genero"></p>
+        <p id="detalle-puntuacion"></p>
+        <p id="detalle-descripcion"></p>
+
+        <button id="detalle-favorito" type="button">
+            ❤️ Agregar a favoritos
+        </button>	
+<a id="detalle-steam" class="boton-steam"
+   href="#" target="_blank" rel="noopener noreferrer">
+    🎮 Ver en Steam
+</a>
+    </div>
+</dialog>
+
+ 
+    <footer>
+        <p>JelasGames © 2026 - Catálogo de videojuegos</p>
+    </footer>
+
+</body>
+</html>
